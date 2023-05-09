@@ -4,4 +4,9 @@ body{
     text-align: center;
     color: aliceblue;
     font-family: Arial;
+    
+}
+img{
+    width: 100%;
+    height: auto;
 }
