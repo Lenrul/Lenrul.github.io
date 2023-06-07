@@ -588,7 +588,7 @@ video {
 }
 @font-face {
     font-family: Souvenir;
-    src: url(assets/souvnrl.ttf);
+    src: url(/souvnrl.ttf);
 }
 .customyt {
     --tw-bg-opacity: 1;
