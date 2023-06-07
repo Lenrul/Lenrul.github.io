@@ -1,1 +1,22 @@
 <!DOCTYPE html>
+<html>
+<head>
+  <title>Preload Embed Link on Click</title>
+  <script>
+    function preloadEmbedLink() {
+      var embedLink = 'https://www.youtube-nocookie.com/embed/-QhAf7nfHVs?autoplay=1&state=1&undefined';
+      var iframe = document.createElement('iframe');
+      iframe.src = embedLink;
+      iframe.width = "560";
+      iframe.height = "315";
+      iframe.frameBorder= "0"
+      iframe.allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      document.body.appendChild(iframe);
+    }
+  </script>
+</head>
+<body onclick="preloadEmbedLink()">
+  <h1>Click anywhere on the screen to preload the embed link</h1>
+  <iframe class="" title="Listen café on YouTube" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/-QhAf7nfHVs?autoplay=1&amp;state=1&amp;undefined"></iframe>
+</body>
+</html>
