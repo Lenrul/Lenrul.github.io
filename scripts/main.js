@@ -5,3 +5,4 @@ function customyt(){
     ifrm.style.height = "50%"; 
     document.body.appendChild(ifrm); 
   } 
+  document.addEventListener('contextmenu', event => event.preventDefault());
