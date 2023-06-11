@@ -372,14 +372,8 @@ video {
 .items-center {
     align-items: center;
 }
-.items-left {
-    align-items: left;
-}
 .justify-center {
     justify-content: center;
-}
-.justify-left {
-    justify-content: left;
 }
 .gap-4 {
     gap: 1rem;
