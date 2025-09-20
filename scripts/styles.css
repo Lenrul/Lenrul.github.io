@@ -534,21 +534,21 @@ video {
     --tw-text-opacity: 1;
     color: rgb(29 185 84 / var(--tw-text-opacity));
 }
-.hover\:text-\[\#FA243C\]:hover {
+.hover\:text-\[\#1DA1F2\]:hover {
     --tw-text-opacity: 1;
-    color: rgb(250 36 60 / var(--tw-text-opacity));
+    color: rgb(29 161 242 / var(--tw-text-opacity));
 }
 .hover\:text-\[\#FF0000\]:hover {
     --tw-text-opacity: 1;
     color: rgb(255 0 0 / var(--tw-text-opacity));
 }
-.hover\:text-\[\#408294\]:hover {
+.hover\:text-\[\#6441A5\]:hover {
     --tw-text-opacity: 1;
-    color: rgb(64 130 148 / var(--tw-text-opacity));
+    color: rgb(100 65 165 / var(--tw-text-opacity));
 }
 .hover\:text-\[\#FF9900\]:hover {
     --tw-text-opacity: 1;
-    color: rgb(255 153 0 / var(--tw-text-opacity));
+    color: rgb(255 105 80 / var(--tw-text-opacity));
 }
 .hover\:text-\[\#FEAA2D\]:hover {
     --tw-text-opacity: 1;
