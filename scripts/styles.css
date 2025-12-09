@@ -530,6 +530,10 @@ video {
 .blur-sm {
     --tw-blur: blur(4px);
 }
+.hover\:text-\[\#738ADB\]:hover {
+    --tw-text-opacity: 1;
+    color: rgb(115 138 219 / var(--tw-text-opacity));
+}
 .hover\:text-\[\#1DB954\]:hover {
     --tw-text-opacity: 1;
     color: rgb(29 185 84 / var(--tw-text-opacity));
