@@ -1,1101 +1,120 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-    <!-- metadata shet -->
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lenrui</title>
-    <meta name="robots" content="index,follow" />
-    <meta name="description" content="The Len Express" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lén Rui</title>
+    <meta name="description" content="The Len Express — home of Lén Rui." />
     <meta name="theme-color" content="#FDE2C5" />
+    <meta name="robots" content="index,follow" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://raw.githubusercontent.com/Lenrul/Lenrul.github.io/refs/heads/main/assets/Boi_2.png" />
-
-    <meta name="apple-mobile-web-app-title" content="Lenrui café" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="Lén Rui" />
+    <meta property="og:description" content="yeah that's pretty much it :p" />
+    <meta property="og:image" content="assets/Boi_2.png" />
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
-    <!-- stylin and others -->
-    <link rel="preload" href="scripts/styles.css" as="style" />
-    <link rel="stylesheet" href="scripts/styles.css">
-    <!-- scripts? -->
-    <script src="scripts/main.js" defer=""></script>
-    <script src="scripts/snow3d/build/snow3d.js"></script>
-    <!-- no scrollbar -->
-    <style type="text/css" id="ms_style">
-        #modern_scroll {
-            all: initial !important;
-        }
-
-        html,
-        body {
-            scrollbar-width: none !important;
-            scroll-behavior: auto !important;
-        }
-        html::-webkit-scrollbar,
-        body::-webkit-scrollbar {
-            display: none !important;
-            width: 0 !important;
-            height: 0 !important;
-        }
-        body *::-webkit-scrollbar {
-            width: 6px;
-            height: 6px;
-        }
-        body *::-webkit-scrollbar-button {
-            display: none;
-        }
-        body *::-webkit-scrollbar-track {
-            background: none;
-            box-shadow: inset 0 0 0px 1px var(--border_color) !important;
-            border-radius: 5px;
-        }
-        body *::-webkit-scrollbar-thumb {
-            background: var(--color, #ffffff);
-            box-shadow: inset 0 0 0px 1px var(--border_color) !important;
-            border-radius: 5px;
-        }
-        body *::-webkit-scrollbar-thumb:hover {
-            background: var(--color, #ffffff);
-        }
-    </style>
+    <link rel="preconnect" href="https://www.youtube-nocookie.com" />
+    <script>document.documentElement.classList.add("js");</script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/main.js" defer></script>
 </head>
 <body>
-    <div id="__next">
-        <!-- Start Of Page -->
-        <div class="fixed -z-10 grid h-screen w-full select-none grid-cols-9 bg-negroni-500">
-            <!-- Left half of page -->
-            <div class="relative col-span-3 row-start-1">
-                <span
-                    style="
-                        box-sizing: border-box;
-                        display: block;
-                        overflow: hidden;
-                        width: initial;
-                        height: initial;
-                        background: none;
-                        opacity: 1;
-                        border: 0;
-                        margin: 0;
-                        padding: 0;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        bottom: 0;
-                        right: 0;
-                    "
-                >
-                <!-- Background IMG -->
-                    <img 
-                        alt=""
-                        src="assets/newbg.png"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover object-right blur-sm"
-                        style="
-                            position: absolute;
-                            inset: 0px;
-                            box-sizing: border-box;
-                            padding: 0px;
-                            border: none;
-                            margin: auto;
-                            display: block;
-                            width: 0px;
-                            height: 0px;
-                            min-width: 100%;
-                            max-width: 100%;
-                            min-height: 100%;
-                            max-height: 100%;
-                        "
+    <!-- background layers -->
+    <div class="bg-scene" aria-hidden="true"></div>
+    <canvas id="snow" aria-hidden="true"></canvas>
 
-                    />
-                    <!-- Script? -->
-                    <noscript>
-                        <img
-                            alt=""
-                            src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnewbg.b4fdd351.png&amp;w=3840&amp;q=75"
-                            decoding="async"
-                            data-nimg="fill"
-                            style="
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                bottom: 0;
-                                right: 0;
-                                box-sizing: border-box;
-                                padding: 0;
-                                border: none;
-                                margin: auto;
-                                display: block;
-                                width: 0;
-                                height: 0;
-                                min-width: 100%;
-                                max-width: 100%;
-                                min-height: 100%;
-                                max-height: 100%;
-                            "
-                            class="object-cover object-right blur-sm"
-                            loading="lazy"
-                        />
-                    </noscript>
-                </span>
-            </div>
-            <!-- Right Half of page -->
-            <div class="relative col-span-3 col-start-7 row-start-1">
-                <span
-                    style="
-                        box-sizing: border-box;
-                        display: block;
-                        overflow: hidden;
-                        width: initial;
-                        height: initial;
-                        background: none;
-                        opacity: 1;
-                        border: 0;
-                        margin: 0;
-                        padding: 0;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        bottom: 0;
-                        right: 0;
-                    "
-                >
-                <!-- Background IMG -->
-                    <img
-                        alt=""
-                        src="assets/newbg.png"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover object-left blur-sm"
-                        style="
-                            position: absolute;
-                            inset: 0px;
-                            box-sizing: border-box;
-                            padding: 0px;
-                            border: none;
-                            margin: auto;
-                            display: block;
-                            width: 0px;
-                            height: 0px;
-                            min-width: 100%;
-                            max-width: 100%;
-                            min-height: 100%;
-                            max-height: 100%;
-                        "
-                    />
-                    <!-- Script? -->
-                    <noscript>
-                        <img
-                            alt=""
-                            src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnewbg.b4fdd351.png&amp;w=3840&amp;q=75"
-                            decoding="async"
-                            data-nimg="fill"
-                            style="
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                bottom: 0;
-                                right: 0;
-                                box-sizing: border-box;
-                                padding: 0;
-                                border: none;
-                                margin: auto;
-                                display: block;
-                                width: 0;
-                                height: 0;
-                                min-width: 100%;
-                                max-width: 100%;
-                                min-height: 100%;
-                                max-height: 100%;
-                            "
-                            class="object-cover object-left blur-sm"
-                            loading="lazy"
-                        />
-                    </noscript>
-                </span>
-            </div>
-        </div>
-        <!-- Canvas Page -->
-        <canvas width="0" height="0" style="z-index: 2; position: absolute; pointer-events: none; top: 0; left: 0; bottom: 0; right: 0;"></canvas>
-        <!-- Canvas Boundry Constraints -->
-        <div class="flex w-full select-none justify-center font-serif text-[#332b22]">
-            <!-- canvas inner boundry -->
-            <div class="min-h-screen w-full max-w-screen-lg bg-negroni-300 shadow-2xl shadow-gray-600">
-                <!-- inner boundry? -->
-                <div class="relative mx-4 h-full bg-repeat pb-24 pt-20 sm:pt-0" style="background-image: url(assets/main.webp);">
-                    <div class="absolute -top-8 left-0 select-none sm:top-0">
-                        <span
-                            style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0; margin: 0; padding: 0; position: relative; max-width: 100%;"
-                        >
-                            <span style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0; margin: 0; padding: 0; max-width: 100%;">
-                                <img
-                                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0; margin: 0; padding: 0;"
-                                    alt=""
-                                    aria-hidden="true"
-                                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27428%27%20height=%27259%27/%3e"
-                                />
-                            </span>
-                            <img
-                                alt=""
-                                draggable="false"
-                                src="assets/tree-tr.png"
-                                decoding="async"
-                                data-nimg="intrinsic"
-                                class="select-none shadow"
-                                style="
-                                    position: absolute;
-                                    inset: 0px;
-                                    box-sizing: border-box;
-                                    padding: 0px;
-                                    border: none;
-                                    margin: auto;
-                                    display: block;
-                                    width: 0px;
-                                    height: 0px;
-                                    min-width: 100%;
-                                    max-width: 100%;
-                                    min-height: 100%;
-                                    max-height: 100%;
-                                "
-                            />
-                            <noscript>
-                                <img
-                                    alt=""
-                                    draggable="false"
-                                    srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftree-tr.30933835.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftree-tr.30933835.png&amp;w=1080&amp;q=75 2x"
-                                    src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftree-tr.30933835.png&amp;w=1080&amp;q=75"
-                                    decoding="async"
-                                    data-nimg="intrinsic"
-                                    style="
-                                        position: absolute;
-                                        top: 0;
-                                        left: 0;
-                                        bottom: 0;
-                                        right: 0;
-                                        box-sizing: border-box;
-                                        padding: 0;
-                                        border: none;
-                                        margin: auto;
-                                        display: block;
-                                        width: 0;
-                                        height: 0;
-                                        min-width: 100%;
-                                        max-width: 100%;
-                                        min-height: 100%;
-                                        max-height: 100%;
-                                    "
-                                    class="select-none shadow"
-                                    loading="lazy"
-                                />
-                            </noscript>
-                        </span>
-                    </div>
-                    <div class="absolute -top-8 right-0 z-10 select-none sm:top-0">
-                        <span
-                            style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0; margin: 0; padding: 0; position: relative; max-width: 100%;"
-                        >
-                            <span style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0; margin: 0; padding: 0; max-width: 100%;">
-                                <img
-                                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0; margin: 0; padding: 0;"
-                                    alt=""
-                                    aria-hidden="true"
-                                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27461%27%20height=%27282%27/%3e"
-                                />
-                            </span>
-                            <img
-                                alt=""
-                                draggable="false"
-                                src="assets/tree-tl.png"
-                                decoding="async"
-                                data-nimg="intrinsic"
-                                class="select-none shadow"
-                                style="
-                                    position: absolute;
-                                    inset: 0px;
-                                    box-sizing: border-box;
-                                    padding: 0px;
-                                    border: none;
-                                    margin: auto;
-                                    display: block;
-                                    width: 0px;
-                                    height: 0px;
-                                    min-width: 100%;
-                                    max-width: 100%;
-                                    min-height: 100%;
-                                    max-height: 100%;
-                                "
-                            />
-                            <noscript>
-                                <img
-                                    alt=""
-                                    draggable="false"
-                                    srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftree-tl.ce9ee6ee.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftree-tl.ce9ee6ee.png&amp;w=1080&amp;q=75 2x"
-                                    src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftree-tl.ce9ee6ee.png&amp;w=1080&amp;q=75"
-                                    decoding="async"
-                                    data-nimg="intrinsic"
-                                    style="
-                                        position: absolute;
-                                        top: 0;
-                                        left: 0;
-                                        bottom: 0;
-                                        right: 0;
-                                        box-sizing: border-box;
-                                        padding: 0;
-                                        border: none;
-                                        margin: auto;
-                                        display: block;
-                                        width: 0;
-                                        height: 0;
-                                        min-width: 100%;
-                                        max-width: 100%;
-                                        min-height: 100%;
-                                        max-height: 100%;
-                                    "
-                                    class="select-none shadow"
-                                    loading="lazy"
-                                />
-                            </noscript>
-                        </span>
-                    </div>
-                    <div class="absolute left-0 bottom-0 z-10 select-none">
-                        <span
-                            style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0; margin: 0; padding: 0; position: relative; max-width: 100%;"
-                        >
-                            <span style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0; margin: 0; padding: 0; max-width: 100%;">
-                                <img
-                                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0; margin: 0; padding: 0;"
-                                    alt=""
-                                    aria-hidden="true"
-                                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27537%27%20height=%27259%27/%3e"
-                                />
-                            </span>
-                            <img
-                                alt=""
-                                draggable="false"
-                                src="assets/tree-bl.png"
-                                decoding="async"
-                                data-nimg="intrinsic"
-                                class="select-none shadow"
-                                style="
-                                    position: absolute;
-                                    inset: 0px;
-                                    box-sizing: border-box;
-                                    padding: 0px;
-                                    border: none;
-                                    margin: auto;
-                                    display: block;
-                                    width: 0px;
-                                    height: 0px;
-                                    min-width: 100%;
-                                    max-width: 100%;
-                                    min-height: 100%;
-                                    max-height: 100%;
-                                "
-                            />
-                            <noscript>
-                                <img
-                                    alt=""
-                                    draggable="false"
-                                    srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftree-bl.84da1591.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftree-bl.84da1591.png&amp;w=1080&amp;q=75 2x"
-                                    src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftree-bl.84da1591.png&amp;w=1080&amp;q=75"
-                                    decoding="async"
-                                    data-nimg="intrinsic"
-                                    style="
-                                        position: absolute;
-                                        top: 0;
-                                        left: 0;
-                                        bottom: 0;
-                                        right: 0;
-                                        box-sizing: border-box;
-                                        padding: 0;
-                                        border: none;
-                                        margin: auto;
-                                        display: block;
-                                        width: 0;
-                                        height: 0;
-                                        min-width: 100%;
-                                        max-width: 100%;
-                                        min-height: 100%;
-                                        max-height: 100%;
-                                    "
-                                    class="select-none shadow"
-                                    loading="lazy"
-                                />
-                            </noscript>
-                        </span>
-                    </div>
-                    <div class="absolute right-0 bottom-0 z-10 select-none">
-                        <span
-                            style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0; margin: 0; padding: 0; position: relative; max-width: 100%;"
-                        >
-                            <span style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0; margin: 0; padding: 0; max-width: 100%;">
-                                <img
-                                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0; margin: 0; padding: 0;"
-                                    alt=""
-                                    aria-hidden="true"
-                                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27560%27%20height=%27272%27/%3e"
-                                />
-                            </span>
-                            <img
-                                alt=""
-                                draggable="false"
-                                src="assets/tree-br.png"
-                                decoding="async"
-                                data-nimg="intrinsic"
-                                class="select-none shadow"
-                                style="
-                                    position: absolute;
-                                    inset: 0px;
-                                    box-sizing: border-box;
-                                    padding: 0px;
-                                    border: none;
-                                    margin: auto;
-                                    display: block;
-                                    width: 0px;
-                                    height: 0px;
-                                    min-width: 100%;
-                                    max-width: 100%;
-                                    min-height: 100%;
-                                    max-height: 100%;
-                                "
-                            />
-                            <noscript>
-                                <img
-                                    alt=""
-                                    draggable="false"
-                                    srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftree-br.8e0ac150.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftree-br.8e0ac150.png&amp;w=1200&amp;q=75 2x"
-                                    src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftree-br.8e0ac150.png&amp;w=1200&amp;q=75"
-                                    decoding="async"
-                                    data-nimg="intrinsic"
-                                    style="
-                                        position: absolute;
-                                        top: 0;
-                                        left: 0;
-                                        bottom: 0;
-                                        right: 0;
-                                        box-sizing: border-box;
-                                        padding: 0;
-                                        border: none;
-                                        margin: auto;
-                                        display: block;
-                                        width: 0;
-                                        height: 0;
-                                        min-width: 100%;
-                                        max-width: 100%;
-                                        min-height: 100%;
-                                        max-height: 100%;
-                                    "
-                                    class="select-none shadow"
-                                    loading="lazy"
-                                />
-                            </noscript>
-                        </span>
-                    </div>
-                    <!-- start of canvas page -->
-                    <main class="w-full gap-4 sm:grid sm:grid-cols-2 sm:pt-16">
-                        <div class="my-4 flex select-none flex-col items-center justify-center sm:h-96">
-                            <div class="z-10 text-5xl">It's</div>
-                            <div class="z-10 text-[136px] leading-none">Lén<br>Rui</div>
-                            <div class="z-10 text-2xl">yeah that's pretty much it :p</div>
-                        </div>
-                        <div class="mx-12 flex select-none items-center justify-center sm:mx-0 sm:h-96">
-                            <span
-                                style="
-                                    box-sizing: border-box;
-                                    display: inline-block;
-                                    overflow: hidden;
-                                    width: initial;
-                                    height: initial;
-                                    background: none;
-                                    opacity: 1;
-                                    border: 0;
-                                    margin: 0;
-                                    padding: 0;
-                                    position: relative;
-                                    max-width: 100%;
-                                "
-                            >
-                                <span style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0; margin: 0; padding: 0; max-width: 100%;">
-                                    <img
-                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0; margin: 0; padding: 0;"
-                                        alt=""
-                                        aria-hidden="true"
-                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27352%27%20height=%27376%27/%3e"
-                                    />
-                                </span>
-                                <!-- Commission Image -->
-                                <img
-                                    alt=""
-                                    draggable="false"
-                                    src="assets/Boi_2.png"
-                                    decoding="async"
-                                    data-nimg="intrinsic"
-                                    class="h-full w-full bg-cover shadow-2xl"
-                                    style="
-                                        position: absolute;
-                                        inset: 0px;
-                                        box-sizing: border-box;
-                                        padding: 0px;
-                                        border: none;
-                                        margin: auto;
-                                        display: block;
-                                        width: 0px;
-                                        height: 0px;
-                                        min-width: 100%;
-                                        max-width: 100%;
-                                        min-height: 100%;
-                                        max-height: 100%;
-                                    "
-                                />
-                                <noscript>
-                                    <img
-                                        alt=""
-                                        draggable="false"
-                                        srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcommish.979efb01.png&amp;w=384&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcommish.979efb01.png&amp;w=750&amp;q=75 2x"
-                                        src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcommish.979efb01.png&amp;w=750&amp;q=75"
-                                        decoding="async"
-                                        data-nimg="intrinsic"
-                                        style="
-                                            position: absolute;
-                                            top: 0;
-                                            left: 0;
-                                            bottom: 0;
-                                            right: 0;
-                                            box-sizing: border-box;
-                                            padding: 0;
-                                            border: none;
-                                            margin: auto;
-                                            display: block;
-                                            width: 0;
-                                            height: 0;
-                                            min-width: 100%;
-                                            max-width: 100%;
-                                            min-height: 100%;
-                                            max-height: 100%;
-                                        "
-                                        class="h-full w-full bg-cover shadow-2xl"
-                                        loading="lazy"
-                                    />
-                                </noscript>
-                            </span>
-                        </div>
-                    </main>
-                    <!-- Lower Section -->
-                    <section class="flex w-full flex-col-reverse gap-4 pb-32 sm:grid sm:grid-cols-8 sm:pt-16">
-                        <div class="col-span-5 flex items-center">
-                            <div class="z-10 aspect-video h-min w-full rounded-xl bg-negroni-300 p-3 shadow-lg md:ml-16">
-                                <link rel="preload" href="https://i.ytimg.com/vi/-QhAf7nfHVs/hqdefault.jpg" as="image" />
-                                <iframe class="" title="Listen café on YouTube" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/16Bj6aPi1A8?autoplay=1&amp;state=1&amp;undefined"></iframe>
-                            </div>
-                        </div>
-                        <!-- Second part -->
-                        <div class="col-span-3 flex w-full flex-col items-center gap-2 p-8 lowercase sm:ml-4">
-                            <h2 class="z-10 text-7xl">Find Me!</h2>
-                            <hr class="z-10 w-full max-w-[12rem] border border-[#332b22]" />
-                            <ul class="z-10 text-right text-2xl">
-                                <!-- Links -->
-                                <li class="hover:text-[#738ADB]">
-                                    <a href="https://discordapp.com/users/314488059360182272" target="_blank">
-                                        Discord<!-- -->
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="713.80402" fill="currentColor" viewBox="0 0 1000 713.80402" class="ml-4 inline h-6 w-6">
-                                            <title>Discord</title>
-                                            <path
-                                                d="M 361.9857,0.00138389 C 348.73055,0.05478389 239.07459,3.1670339 123.39327,89.124664 123.39327,89.124664 0,311.06297 0,584.4136 c 0,0 71.978249,123.39208 261.35281,129.39038 0,0 31.70511,-37.7037 57.41206,-70.26582 C 209.93876,610.97599 168.80785,543.28361 168.80785,543.28361 c 0,0 8.5708,5.99726 23.99498,14.56626 0.85689,0 1.71122,0.85558 3.42502,1.7125 2.57069,1.71377 5.1422,2.57081 7.7129,4.28459 21.42246,11.99658 42.84423,21.42368 62.5529,29.13581 35.13283,14.56729 77.12215,27.41951 125.96536,36.84541 64.26736,11.9966 139.67306,16.28044 221.93532,0.85625 40.27424,-7.71208 81.40794,-18.85053 124.25286,-36.84541 29.99142,-11.13969 63.40925,-27.41914 98.54205,-50.55541 0,0 -42.84417,69.40888 -155.09786,101.11413 25.70697,31.70521 56.55581,68.54998 56.55581,68.54998 C 928.02173,706.94949 1000,583.55668 1000,584.4136 1000,311.06297 876.60671,89.124664 876.60671,89.124664 754.07028,-2.5634661 636.67349,0.00803389 636.67349,0.00803389 L 624.67932,13.718014 C 770.35209,57.419834 838.04548,121.6888 838.04548,121.6888 748.92802,73.702484 661.52634,49.707644 580.121,40.281764 c -61.69669,-6.85519 -120.82499,-5.13937 -173.09576,1.71581 -5.14137,0 -9.42484,0.85563 -14.56623,1.7125 -29.99144,3.42762 -102.82721,13.70953 -194.51535,53.98375 -31.70523,13.710366 -50.55871,23.994976 -50.55871,23.994976 0,0 70.26568,-67.697276 224.50739,-111.399106 L 363.32318,0.00803389 c 0,0 -0.4538,-0.0102 -1.33748,-0.007 z M 340.18778,316.20414 c 48.8432,0 88.26098,41.98669 87.40413,94.25746 0,52.27084 -38.56093,94.2608 -87.40413,94.2608 -47.98632,0 -87.40413,-41.98996 -87.40413,-94.2608 0,-52.27077 38.56091,-94.25746 87.40413,-94.25746 z m 312.76778,0 c 47.98631,0 87.40413,41.98669 87.40413,94.25746 0,52.27084 -38.56089,94.2608 -87.40413,94.2608 -47.9863,0 -87.40413,-41.98996 -87.40413,-94.2608 0,-52.27077 38.56091,-94.25746 87.40413,-94.25746 z"
-                                            ></path>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="hover:text-[#1DA1F2]">
-                                    <a href="https://x.com/Lenruii" target="_blank">
-                                        Twitter<!-- -->
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16" class="ml-4 inline h-6 w-6">
-                                            <title>Twitter</title>
-                                            <path
-                                                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
-                                            ></path>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="hover:text-[#FF9900]">
-                                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-                                        Twitter AD<!-- -->
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 1200 1207" class="ml-4 inline h-6 w-6">
-                                            <title>Twitter AD</title>
-                                            <path
-                                                d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"
-                                            ></path>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="hover:text-[#1DB954]">
-                                    <a href="https://open.spotify.com/user/31zhrqgizelyfxju7d2szo27vbbi?si=d0745e3ea2744e91&nd=1&dlsi=393b054800de4b0b" target="_blank">
-                                        Spotify<!-- -->
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" class="ml-4 inline h-6 w-6">
-                                            <title>Spotify</title>
-                                            <path
-                                                d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"
-                                            ></path>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <a href="https://www.youtube.com/channel/UCGg_1t49x-jf2KrbxdY-A5w" target="_blank">
-                                    <li class="hover:text-[#FF0000]">
-                                        YouTube<!-- -->
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" class="ml-4 inline h-6 w-6">
-                                            <title>Youtube</title>
-                                            <path
-                                                d="M12 0C5.376 0 0 5.376 0 12s5.376 12 12 12 12-5.376 12-12S18.624 0 12 0zm0 19.104c-3.924 0-7.104-3.18-7.104-7.104S8.076 4.896 12 4.896s7.104 3.18 7.104 7.104-3.18 7.104-7.104 7.104zm0-13.332c-3.432 0-6.228 2.796-6.228 6.228S8.568 18.228 12 18.228s6.228-2.796 6.228-6.228S15.432 5.772 12 5.772zM9.684 15.54V8.46L15.816 12l-6.132 3.54z"
-                                            ></path>
-                                        </svg>
-                                    </li>
-                                </a>
-                                <li class="hover:text-[#6441A5]">
-                                    <a href="https://www.twitch.tv/Lenrui/" target="_blank">
-                                        Twitche<!-- -->
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor" viewBox="0 0 16 16" class="ml-4 inline h-6 w-6">
-                                            <title>Twitch</title>
-                                            <path d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0H3.857zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142v6.286z"></path>
-                                            <path d="M11.857 3.143h-1.143V6.57h1.143V3.143zm-3.143 0H7.571V6.57h1.143V3.143z"/>
-                                        </svg>
-                                    </a>
-                                </li>
+    <div class="paper-column">
+        <!-- decorative cherry-blossom corners -->
+        <img class="corner tl" src="assets/tree-tr.png" alt="" aria-hidden="true" draggable="false" />
+        <img class="corner tr" src="assets/tree-tl.png" alt="" aria-hidden="true" draggable="false" />
+        <img class="corner bl" src="assets/tree-bl.png" alt="" aria-hidden="true" draggable="false" />
+        <img class="corner br" src="assets/tree-br.png" alt="" aria-hidden="true" draggable="false" />
 
-                                <li class="hover:text-[#FEAA2D]">
-                                    <a href="https://www.lenrui.net/">
-                                        Lenboi<!-- -->
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" class="ml-4 inline h-6 w-6">
-                                            <title>Lenboi</title>
-                                            <path
-                                                d="M18.81 4.16v3.03H24V4.16h-5.19zM6.27 8.38v3.027h5.189V8.38h-5.19zm12.54 0v3.027H24V8.38h-5.19zM6.27 12.594v3.027h5.189v-3.027h-5.19zm6.271 0v3.027h5.19v-3.027h-5.19zm6.27 0v3.027H24v-3.027h-5.19zM0 16.81v3.029h5.19v-3.03H0zm6.27 0v3.029h5.189v-3.03h-5.19zm6.271 0v3.029h5.19v-3.03h-5.19zm6.27 0v3.029H24v-3.03h-5.19Z"
-                                            ></path>
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
+        <!-- ============ NAV ============ -->
+        <header class="nav" id="nav">
+            <a class="nav__brand" href="index.html">Lén Rui<span class="dot">.</span></a>
+            <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+            <nav class="nav__links" aria-label="Primary">
+                <a href="index.html" aria-current="page">home</a>
+                <a href="projects.html">projects</a>
+                <a href="commissions.html">commissions</a>
+                <a href="about.html">about</a>
+            </nav>
+        </header>
+
+        <main class="wrap">
+            <!-- ============ HERO ============ -->
+            <section class="hero">
+                <div class="hero__intro reveal">
+                    <p class="its">It's</p>
+                    <h1 class="hero__name display">Lén<br /><span class="accent">Rui</span></h1>
+                    <p class="hero__tag">yeah that's pretty much it :p</p>
+                    <div class="hero__cta">
+                        <a class="btn btn--primary" href="projects.html">see my work →</a>
+                        <a class="btn btn--ghost" href="about.html">about me</a>
+                    </div>
                 </div>
+                <div class="hero__portrait reveal" data-delay="1">
+                    <img src="assets/Boi_2.png" alt="Illustration of Lén Rui — a character with lavender hair and purple hoodie" />
+                </div>
+            </section>
+
+            <!-- ============ VIDEO + FIND ME ============ -->
+            <section class="home-lower">
+                <div class="video-frame reveal">
+                    <div class="ratio">
+                        <iframe
+                            title="Featured video on YouTube"
+                            src="https://www.youtube-nocookie.com/embed/16Bj6aPi1A8"
+                            loading="lazy"
+                            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="findme reveal" data-delay="1">
+                    <h2>find me!</h2>
+                    <hr class="rule" />
+                    <div class="socials">
+                        <a data-c="discord" href="https://discordapp.com/users/314488059360182272" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+                            discord
+                        </a>
+                        <a data-c="x" href="https://x.com/Lenruii" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            twitter
+                        </a>
+                        <a data-c="telegram" href="https://t.me/lenrui" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.91 3.79L20.3 20.84c-.25 1.21-.98 1.5-2 .94l-5.5-4.07-2.66 2.57c-.3.3-.55.56-1.1.56-.72 0-.6-.27-.84-.95L4.3 12.68l-5.45-1.7c-1.18-.35-1.19-1.16.26-1.75l21.26-8.2c.97-.43 1.9.24 1.53 1.72z" transform="translate(0.5 0)"/></svg>
+                            telegram
+                        </a>
+                        <a data-c="spotify" href="https://open.spotify.com/user/31zhrqgizelyfxju7d2szo27vbbi" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                            spotify
+                        </a>
+                        <a data-c="youtube" href="https://www.youtube.com/channel/UCGg_1t49x-jf2KrbxdY-A5w" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                            youtube
+                        </a>
+                        <a data-c="twitch" href="https://www.twitch.tv/Lenrui/" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                            twitch
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ============ FOOTER ============ -->
+        <footer class="footer wrap">
+            <p class="footer__brand">Lén Rui</p>
+            <div class="footer__socials">
+                <a href="https://discordapp.com/users/314488059360182272" target="_blank" rel="noopener" aria-label="Discord"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286z"/></svg></a>
+                <a href="https://x.com/Lenruii" target="_blank" rel="noopener" aria-label="Twitter / X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                <a href="https://www.youtube.com/channel/UCGg_1t49x-jf2KrbxdY-A5w" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                <a href="https://www.twitch.tv/Lenrui/" target="_blank" rel="noopener" aria-label="Twitch"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg></a>
             </div>
-        </div>
-        <div class="hidden">Forked from somewhere out there... if you know you know.</div>
+            <p class="footer__note">© <span data-year>2026</span> Lén Rui · made with too much snow ❄</p>
+        </footer>
     </div>
 </body>
-<div id="modern_scroll">
-    <template shadowrootmode="open">
-        <style type="text/css">
-            :host {
-                all: initial;
-                --color: #ffffff;
-                --color_bg: #000000;
-                --border_color: rgba(255, 255, 255, 0.5);
-                --bookmark_text_color: #ffffff;
-            }
-            :host .pagetheme {
-                --color: #fde2c5;
-                --color_bg: #fde2c5;
-                --border_color: rgba(255, 255, 255, 0.5);
-                --bookmark_text_color: #ffffff;
-            }
-            :host,
-            #ms_v_container,
-            #ms_h_container,
-            #ms_vbar_bg,
-            #ms_hbar_bg,
-            #ms_vbar,
-            #ms_hbar,
-            #ms_superbar,
-            #ms_page_cover,
-            #ms_upbutton,
-            #ms_downbutton,
-            #ms_middleclick_cursor {
-                position: fixed;
-                z-index: 2147483647;
-                border: none;
-                padding: 0;
-                margin: 0;
-                display: none;
-                background: none;
-            }
-
-            :host,
-            #modern_scroll_bars,
-            #modern_scroll_buttons {
-                display: inline;
-            }
-            #ms_v_container {
-                height: 100%;
-                width: 1px;
-                right: 0px;
-                top: 0px;
-                background: rgba(0, 0, 0, 0);
-                transform-origin: 100% 0 0;
-            }
-            #ms_h_container {
-                height: 1px;
-                width: 100%;
-                left: 0px;
-                bottom: 0px;
-                background: rgba(0, 0, 0, 0);
-                transform-origin: 0 100% 0;
-            }
-            #ms_vbar_bg,
-            #ms_hbar_bg {
-                opacity: 0;
-                transition: opacity 0.5s 1000ms;
-            }
-            #ms_vbar_bg {
-                top: 2px;
-                bottom: 2px;
-                height: calc(100% - 2 * 2px);
-                width: auto;
-                right: 0px;
-                left: auto;
-            }
-            #ms_hbar_bg {
-                left: 0px;
-                right: 14px;
-                left: 2px;
-                width: calc(100% - 16px);
-                height: auto;
-                bottom: 0px;
-                top: auto;
-            }
-            #ms_vbar_bg_ui,
-            #ms_hbar_bg_ui {
-                background: var(--color_bg);
-                box-shadow: inset 0 0 0px 1px var(--border_color) !important;
-                border-radius: 5px;
-            }
-            #ms_vbar_bg_ui {
-                margin-right: 2px;
-                height: 100%;
-                width: 6px;
-                transition: width 0.25s;
-            }
-            #ms_hbar_bg_ui {
-                margin-bottom: 2px;
-                width: 100%;
-                height: 6px;
-                transition: height 0.25s;
-            }
-            #ms_vbar,
-            #ms_hbar,
-            .bookmarkIndicator {
-                opacity: 0;
-                transition: opacity 0.5s 1000ms;
-            }
-            #ms_vbar {
-                top: 0;
-                height: var(--vbar-height);
-                min-height: 34px;
-                width: auto;
-                right: 0px;
-                left: auto;
-            }
-            #ms_hbar {
-                left: 0;
-                width: var(--hbar-width);
-                min-width: 34px;
-                height: auto;
-                bottom: 0px;
-                top: auto;
-            }
-            #ms_vbar_ui,
-            #ms_hbar_ui,
-            .bookmarkIndicator {
-                background: var(--color);
-                box-shadow: inset 0 0 0px 1px var(--border_color) !important;
-                border-radius: 5px;
-            }
-            #ms_vbar_ui {
-                height: calc(100% - 4px);
-                min-height: 30px;
-                width: 6px;
-                margin-top: 2px;
-                margin-bottom: 2px;
-                margin-right: 2px;
-                transition: width 0.25s;
-            }
-            #ms_hbar_ui {
-                width: calc(100% - 4px);
-                min-width: 30px;
-                height: 6px;
-                margin-left: 2px;
-                margin-right: 2px;
-                margin-bottom: 2px;
-                transition: height 0.25s;
-            }
-            #ms_superbar {
-                top: 0;
-                left: 0;
-                height: var(--vbar-height);
-                width: var(--hbar-width);
-                background: rgba(0, 0, 0, 0);
-                opacity: 0;
-                box-shadow: inset 0 0 0px 1px var(--border_color), 0 0 200px 10px #999 !important;
-                border-radius: 5px;
-                transition: opacity 0.5s 1000ms;
-                min-width: 30px;
-                min-height: 30px;
-            }
-            #ms_page_cover {
-                left: 0px;
-                top: 0px;
-                width: 100%;
-                height: 100%;
-                background: rgba(0, 0, 0, 0);
-                padding: 0px;
-                margin: 0px;
-            }
-
-            #ms_upbutton,
-            #ms_downbutton {
-                height: 100px;
-                width: 100px;
-                left: 48%;
-                opacity: 0.1;
-                background: var(--color);
-                border-radius: 50px;
-                box-shadow: inset 0 0 0px 1px var(--border_color);
-                transition: opacity 0.5s;
-            }
-            #ms_upbutton {
-                top: -50px;
-            }
-            #ms_downbutton {
-                bottom: -50px;
-            }
-            #ms_upbutton.dragged_button,
-            #ms_downbutton.dragged_button {
-                opacity: 0.5;
-            }
-            .action_button {
-                position: fixed;
-                z-index: 2147483647;
-                width: 3rem;
-                height: 3rem;
-                background: var(--color);
-                border-radius: 100%;
-                border: 1px solid var(--border_color);
-                color: var(--bookmark_text_color);
-                pointer-events: none;
-                opacity: 0.5;
-                display: none;
-                justify-content: center;
-                align-items: center;
-                vertical-align: middle;
-                --overscroll-delta: -50px;
-            }
-            .action_button.top {
-                display: flex;
-                top: var(--overscroll-delta);
-                left: calc(50vw - 1.5rem);
-            }
-            .action_button.topright {
-                display: flex;
-                top: var(--overscroll-delta);
-                right: var(--overscroll-delta);
-            }
-            .action_button.bottom {
-                display: flex;
-                bottom: var(--overscroll-delta);
-                left: calc(50vw - 1.5rem);
-            }
-            .action_button.left {
-                display: flex;
-                left: var(--overscroll-delta);
-                top: calc(50vh - 1.5rem);
-            }
-            .action_button.right {
-                display: flex;
-                right: var(--overscroll-delta);
-                top: calc(50vh - 1.5rem);
-            }
-            .action_button.active {
-                transition: 0.2s;
-                transform: scale(1.2);
-                opacity: 1;
-                box-shadow: 0 0 5px 0 var(--color);
-            }
-
-            #ms_v_container:hover #ms_vbar_ui,
-            #ms_v_container:hover #ms_vbar_bg_ui {
-                width: 12px;
-                transition: width 0.1s;
-            }
-            #ms_h_container:hover #ms_hbar_ui,
-            #ms_h_container:hover #ms_hbar_bg_ui {
-                height: 12px;
-                transition: height 0.1s;
-            }
-            #ms_v_container:hover #ms_vbar,
-            #ms_h_container:hover #ms_hbar,
-            #ms_v_container:hover .bookmarkIndicator {
-                opacity: 0.5;
-                transition: opacity 0.1s 0s;
-            }
-            #ms_v_container:hover #ms_vbar_bg,
-            #ms_h_container:hover #ms_hbar_bg {
-                opacity: 0.5;
-                transition: opacity 0.1s 0s;
-            }
-            #ms_v_container #ms_vbar:hover,
-            #ms_h_container #ms_hbar:hover,
-            #ms_upbutton:hover,
-            #ms_downbutton:hover,
-            #ms_v_container .bookmarkIndicator:hover {
-                opacity: 0.7;
-                transition: opacity 0.1s 0s;
-            }
-            #ms_superbar:hover {
-                opacity: 0.7;
-                transition: opacity 0.25s 0s;
-            }
-
-            .bookmarkIndicator {
-                line-height: 20px;
-                height: 20px;
-                color: var(--bookmark_text_color);
-                position: absolute;
-                right: 19px;
-                padding: 3px 5px;
-                display: block;
-                text-decoration: none;
-            }
-            .bookmarkIndicator > span {
-                white-space: nowrap;
-                max-width: 20em;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                display: block;
-            }
-            .bookmarkIndicator br,
-            .bookmarkIndicator br::after {
-                content: " / ";
-            }
-            .bookmarkIndicator::before,
-            .bookmarkIndicator::after {
-                content: "";
-                position: absolute;
-                border-style: solid;
-            }
-            .bookmarkIndicator::before {
-                left: 100%;
-                top: 6px;
-                border-top: 6px solid transparent;
-                border-left: 6px solid var(--border_color);
-                border-bottom: 6px solid transparent;
-                border-right: none;
-            }
-            .bookmarkIndicator::after {
-                left: calc(100% - 1px);
-                top: 6px;
-                border-top: 6px solid transparent;
-                border-left: 6px solid var(--color);
-                border-bottom: 6px solid transparent;
-                border-right: none;
-            }
-            .bookmarkIndicator:hover {
-                z-index: 1;
-            }
-            .custom.bookmarkIndicator {
-                cursor: pointer;
-            }
-            #ms_v_container #ms_bookmarks {
-                opacity: 0;
-                transition: opacity 0.5s 1000ms;
-            }
-            #ms_v_container:hover #ms_bookmarks {
-                opacity: 1;
-                transition: opacity 0.1s;
-            }
-
-            @supports (animation-timeline: works) {
-                @keyframes scrolldown {
-                    to {
-                        top: var(--max-top);
-                    }
-                }
-                #ms_vbar {
-                    animation: 1s linear forwards scrolldown;
-                    animation-timeline: scroll(vertical root);
-                }
-                @keyframes scrollright {
-                    to {
-                        left: var(--max-left);
-                    }
-                }
-                #ms_hbar {
-                    animation: 1s linear forwards scrollright;
-                    animation-timeline: scroll(horizontal root);
-                }
-                #ms_superbar {
-                    animation: 1s linear forwards scrolldown, 1s linear forwards scrollright;
-                    animation-timeline: scroll(vertical root), scroll(horizontal root);
-                }
-            }
-
-            .dragged #ms_vbar_bg,
-            .dragged #ms_hbar_bg {
-                opacity: 0.5;
-            }
-            .dragged #ms_vbar,
-            .dragged #ms_hbar {
-                opacity: 0.7;
-            }
-            .dragged #ms_vbar_ui,
-            .dragged #ms_vbar_bg_ui {
-                width: 12px;
-            }
-            .dragged #ms_hbar_ui,
-            .dragged #ms_hbar_bg_ui {
-                height: 12px;
-            }
-            #ms_superbar.dragged {
-                opacity: 1;
-            }
-            #ms_middleclick_cursor {
-                width: 64px;
-                height: 64px;
-                cursor: none;
-                background: url(data:image/png;base64,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);
-            }
-
-            @media print {
-                :host {
-                    display: none !important;
-                }
-            }
-
-            :host {
-                --max-top: calc(100vh - var(--vbar-height));
-                --max-left: calc(100vw - var(--hbar-width) - 12px);
-            }
-            :host {
-                --vbar-height: 30px;
-            }
-            :host {
-                --hbar-width: 30px;
-            }
-        </style>
-        <div id="modern_scroll_bars">
-            <div id="ms_page_cover"></div>
-            <div id="ms_middleclick_cursor"></div>
-            <div id="ms_superbar"></div>
-            <div id="ms_h_container" style="transform: scale(1, 1);">
-                <div id="ms_hbar_bg"><div id="ms_hbar_bg_ui"></div></div>
-                <div id="ms_hbar" ><div id="ms_hbar_ui"></div></div>
-            </div>
-            <div id="ms_v_container" style="transform: scale(1, 1);">
-                <div id="ms_vbar_bg" ><div id="ms_vbar_bg_ui"></div></div>
-                <div id="ms_vbar" style="top: 0px;"><div id="ms_vbar_ui"></div></div>
-                <div id="ms_bookmarks" style="display: none;"></div>
-            </div>
-            <div class="action_button">↻</div>
-        </div>
-    </template>
-</div>
 </html>

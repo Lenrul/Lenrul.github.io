@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Commissions · Lén Rui</title>
+    <meta name="description" content="Work Lén Rui has made for other people." />
+    <meta name="theme-color" content="#FDE2C5" />
+    <meta property="og:title" content="Commissions · Lén Rui" />
+    <meta property="og:image" content="assets/Boi_2.png" />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <script>document.documentElement.classList.add("js");</script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <div class="bg-scene" aria-hidden="true"></div>
+    <canvas id="snow" aria-hidden="true"></canvas>
+
+    <div class="paper-column">
+        <img class="corner tl" src="assets/tree-tr.png" alt="" aria-hidden="true" draggable="false" />
+        <img class="corner tr" src="assets/tree-tl.png" alt="" aria-hidden="true" draggable="false" />
+        <img class="corner bl" src="assets/tree-bl.png" alt="" aria-hidden="true" draggable="false" />
+        <img class="corner br" src="assets/tree-br.png" alt="" aria-hidden="true" draggable="false" />
+
+        <header class="nav" id="nav">
+            <a class="nav__brand" href="index.html">Lén Rui<span class="dot">.</span></a>
+            <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+            <nav class="nav__links" aria-label="Primary">
+                <a href="index.html">home</a>
+                <a href="projects.html">projects</a>
+                <a href="commissions.html" aria-current="page">commissions</a>
+                <a href="about.html">about</a>
+            </nav>
+        </header>
+
+        <main class="wrap">
+            <section class="page-header">
+                <p class="eyebrow reveal">made for other people</p>
+                <h1 class="page-title reveal" data-delay="1">Commissions</h1>
+                <hr class="rule reveal" data-delay="1" />
+                <p class="lead center reveal" data-delay="2" style="margin-inline:auto;">
+                    A gallery of work I've done for ma homies <br><em>(Look, ik it's a bit empty but im getting the works done >:3)</em>
+                </p>
+                <div class="reveal" data-delay="2" style="margin-top:1.5rem;">
+                    <a class="btn btn--primary" href="https://t.me/lenrui" target="_blank" rel="noopener">want one? dm me →</a>
+                </div>
+            </section>
+
+            <!-- ============ COMMISSION GRID ============
+                 HOW TO EDIT:
+                 One <article class="card"> per piece.
+                 - card__media img src: the artwork/screenshot (put files in assets/).
+                 - card__title: what it was ("channel banner", "emote set", ...).
+                 - card__meta: who it was for.
+                 - card__desc: optional short note.
+                 Remove "card--placeholder" once a card is real.
+            -->
+            <section class="section" style="padding-top:0;">
+                <div class="grid grid--wide">
+
+                    <!-- REAL EXAMPLE using an existing asset -->
+                    <article class="card reveal">
+                        <div class="card__media">
+                            <img src="assets/IMG_1659.JPEG" alt="Commissioned artwork" loading="lazy" />
+                        </div>
+                        <div class="card__body">
+                            <h3 class="card__title">Floppy Disk Badge</h3>
+                            <p class="card__desc">Initial Pre Work on Making Floppy Disk Badge for the con I went to @Megaplex 2025</p>
+                            <div class="card__tags"><span class="tag">illustration</span></div>
+                            <div class="card__foot">
+                                <span class="card__meta">for a cohort of client</span>
+                                <!-- <a class="card__link" href="#">full size →</a> -->
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- COMMISSION 2 
+                    <article class="card card--placeholder reveal" data-delay="1">
+                        <div class="card__media card__media--empty" aria-hidden="true"></div>
+                        <div class="card__body">
+                            <h3 class="card__title">What it was</h3>
+                            <p class="card__desc">Short note about the piece and the brief.</p>
+                            <div class="card__tags"><span class="tag">type</span></div>
+                            <div class="card__foot">
+                                <span class="card__meta">for @someone</span>
+                                <a class="card__link" href="#">view →</a>
+                            </div>
+                        </div>
+                    </article>
+                    -->
+                    <!-- COMMISSION 3 
+                    <article class="card card--placeholder reveal" data-delay="2">
+                        <div class="card__media card__media--empty" aria-hidden="true"></div>
+                        <div class="card__body">
+                            <h3 class="card__title">What it was</h3>
+                            <p class="card__desc">Short note about the piece and the brief.</p>
+                            <div class="card__tags"><span class="tag">type</span></div>
+                            <div class="card__foot">
+                                <span class="card__meta">for @someone</span>
+                                <a class="card__link" href="#">view →</a>
+                            </div>
+                        </div>
+                    </article>
+                    -->
+                    <!-- COMMISSION 4 
+                    <article class="card card--placeholder reveal">
+                        <div class="card__media card__media--empty" aria-hidden="true"></div>
+                        <div class="card__body">
+                            <h3 class="card__title">What it was</h3>
+                            <p class="card__desc">Short note about the piece and the brief.</p>
+                            <div class="card__tags"><span class="tag">type</span></div>
+                            <div class="card__foot">
+                                <span class="card__meta">for @someone</span>
+                                <a class="card__link" href="#">view →</a>
+                            </div>
+                        </div>
+                    </article>
+                    -->
+                    <!-- COMMISSION 5 
+                    <article class="card card--placeholder reveal" data-delay="1">
+                        <div class="card__media card__media--empty" aria-hidden="true"></div>
+                        <div class="card__body">
+                            <h3 class="card__title">What it was</h3>
+                            <p class="card__desc">Short note about the piece and the brief.</p>
+                            <div class="card__tags"><span class="tag">type</span></div>
+                            <div class="card__foot">
+                                <span class="card__meta">for @someone</span>
+                                <a class="card__link" href="#">view →</a>
+                            </div>
+                        </div>
+                    </article>
+                    -->
+                    <!-- COMMISSION 6 
+                    <article class="card card--placeholder reveal" data-delay="2">
+                        <div class="card__media card__media--empty" aria-hidden="true"></div>
+                        <div class="card__body">
+                            <h3 class="card__title">What it was</h3>
+                            <p class="card__desc">Short note about the piece and the brief.</p>
+                            <div class="card__tags"><span class="tag">type</span></div>
+                            <div class="card__foot">
+                                <span class="card__meta">for @someone</span>
+                                <a class="card__link" href="#">view →</a>
+                            </div>
+                        </div>
+                    </article>
+                    -->
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer wrap">
+            <p class="footer__brand">Lén Rui</p>
+            <div class="footer__socials">
+                <a href="https://discordapp.com/users/314488059360182272" target="_blank" rel="noopener" aria-label="Discord"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286z"/></svg></a>
+                <a href="https://x.com/Lenruii" target="_blank" rel="noopener" aria-label="Twitter / X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                <a href="https://www.youtube.com/channel/UCGg_1t49x-jf2KrbxdY-A5w" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                <a href="https://www.twitch.tv/Lenrui/" target="_blank" rel="noopener" aria-label="Twitch"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg></a>
+            </div>
+            <p class="footer__note">© <span data-year>2026</span> Lén Rui · made with too much snow ❄</p>
+        </footer>
+    </div>
+</body>
+</html>
