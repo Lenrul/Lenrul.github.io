@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Floppy Disk Badge · Lén Rui</title>
+    <meta name="description" content="Custom floppy disk badges by Lén Rui — pricing, shipping, and examples." />
+    <meta name="theme-color" content="#FDE2C5" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Lén Rui" />
+    <meta property="og:url" content="https://lenrui.net/fdb/" />
+    <meta property="og:title" content="Floppy Disk Badge · Lén Rui" />
+    <meta property="og:description" content="Custom floppy disk badges — pricing, shipping, and examples." />
+    <meta property="og:image" content="https://raw.githubusercontent.com/Lenrul/Lenrul.github.io/refs/heads/main/assets/Boi_2.png" />
+    <meta property="og:image:width" content="1674" />
+    <meta property="og:image:height" content="1674" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/Lenrul/Lenrul.github.io/refs/heads/main/assets/Boi_2.png" />
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+    <script>document.documentElement.classList.add("js");</script>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../js/main.js" defer></script>
+</head>
+<body>
+    <div class="bg-scene" aria-hidden="true"></div>
+    <canvas id="snow" aria-hidden="true"></canvas>
+
+    <div class="paper-column">
+        <img class="corner tl" src="../assets/tree-tr.png" alt="" aria-hidden="true" draggable="false" />
+        <img class="corner tr" src="../assets/tree-tl.png" alt="" aria-hidden="true" draggable="false" />
+        <img class="corner bl" src="../assets/tree-bl.png" alt="" aria-hidden="true" draggable="false" />
+        <img class="corner br" src="../assets/tree-br.png" alt="" aria-hidden="true" draggable="false" />
+
+        <header class="nav" id="nav">
+            <a class="nav__brand" href="../index.html">Lén Rui<span class="dot">.</span></a>
+            <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+            <nav class="nav__links" aria-label="Primary">
+                <a href="../index.html">home</a>
+                <a href="../projects.html">projects</a>
+                <a href="../commissions.html">commissions</a>
+                <a href="index.html" aria-current="page">floppy badge</a>
+                <a href="../about.html">about</a>
+            </nav>
+        </header>
+
+        <main class="wrap section" style="padding-top:clamp(2rem,5vw,3.5rem);">
+            <div class="fdb">
+
+                <!-- ============ LEFT: info ============
+                     EDIT ME: prices, add-ons, shipping rows, and the order
+                     links below are placeholders. Swap in your real numbers.
+                -->
+                <div class="fdb__info">
+                    <p class="eyebrow reveal">custom print &nbsp;💾</p>
+                    <h1 class="fdb__title reveal" data-delay="1">Floppy Disk<br />Badge</h1>
+                    <p class="fdb__lead reveal" data-delay="1">
+                        taking boring floppy disks and flipping them as custom badges of your art for your con goers. made to order. (˶•⩊•˶)っ💾
+                    </p>
+
+                    <!-- PRICING -->
+                    <div class="fdb-block reveal" data-delay="1">
+                        <h3>pricing</h3>
+                        <div class="price-list">
+                            <div class="price-row">
+                                <span class="pr-name">The Floppy Floppy<span class="pr-note">Get a Floppy Badge of your own! ദ്ദി（• ˕ •マ.ᐟ</span></span>
+                                <span class="pr-cost">$35</span>
+                            </div>
+                            <div class="price-row">
+                                <span class="pr-name">The Translucent Floppy<span class="pr-note">OOOOH IT'S SEE THROUGH! (˶>⩊<˶)</span></span>
+                                <span class="pr-cost">$45</span>
+                            </div>
+                            <div class="price-row">
+                                <span class="pr-name">Make it Wireless!!<span class="pr-note">Turns out, nobody owns a floppy drive, so I give u nfc for the plebs :3c <br><em>who knows, there may be content inside...<em> </span></span>
+                                <span class="pr-cost">+$5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ADD-ONS -->
+                    <div class="fdb-block reveal" data-delay="1">
+                        <h3>add-ons</h3>
+                        <div class="fdb-addons">
+                            <span class="chip">keychain loop +$2</span>
+                            <span class="chip">Full Cover Floppy Design (tbd)</span>
+                        </div>
+                    </div>
+
+                    <!-- COLOUR STOCK ============================================
+                         EDIT ME: set each item's data-stock to "in", "low", or "out",
+                         change the <span class="swatch"> background colour, and update
+                         the name + status text. Add/remove .stock-item blocks freely.
+                    -->
+                    <div class="fdb-block reveal" data-delay="1">
+                        <h3>color stock</h3>
+                        <div class="stock-grid">
+                            <div class="stock-item" data-stock="low">
+                                <span class="swatch" style="background:#2a2a2e"></span>
+                                <span><span class="stock-item__name">Classic Black</span><span class="stock-item__status">tbd</span></span>
+                            </div>
+                            <div class="stock-item" data-stock="low">
+                                <span class="swatch" style="background:#f4f1ea"></span>
+                                <span><span class="stock-item__name">Arctic White</span><span class="stock-item__status">tbd</span></span>
+                            </div>
+                            <div class="stock-item" data-stock="low">
+                                <span class="swatch" style="background:#3b6fd4"></span>
+                                <span><span class="stock-item__name">Ocean Blue</span><span class="stock-item__status">tbd</span></span>
+                            </div>
+                            <div class="stock-item" data-stock="low">
+                                <span class="swatch" style="background:#a884da"></span>
+                                <span><span class="stock-item__name">Lavender</span><span class="stock-item__status">tbd</span></span>
+                            </div>
+                            <div class="stock-item" data-stock="low">
+                                <span class="swatch" style="background:#d0433f"></span>
+                                <span><span class="stock-item__name">Cherry Red</span><span class="stock-item__status">tbd</span></span>
+                            </div>
+                            <div class="stock-item" data-stock="low">
+                                <span class="swatch" style="background:#4a9d5b"></span>
+                                <span><span class="stock-item__name">Forest Green</span><span class="stock-item__status">tbd</span></span>
+                            </div>
+                            <div class="stock-item" data-stock="low">
+                                <span class="swatch" style="background:#f2c53d"></span>
+                                <span><span class="stock-item__name">Sunny Yellow</span><span class="stock-item__status">tbd</span></span>
+                            </div>
+                            <div class="stock-item" data-stock="low">
+                                <span class="swatch" style="background:linear-gradient(135deg, rgba(168,132,218,0.35), rgba(255,255,255,0.12))"></span>
+                                <span><span class="stock-item__name">Translucent</span><span class="stock-item__status">tbd</span></span>
+                            </div>
+                            <div class="stock-item" data-stock="out">
+                                <span class="swatch" style="background:#e08a3c"></span>
+                                <span><span class="stock-item__name">Tangerine</span><span class="stock-item__status">it don't exist</span></span>
+                            </div>
+                        </div>
+                        <div class="stock-legend">
+                            <span><i class="li-in"></i> in stock</span>
+                            <span><i class="li-low"></i> low</span>
+                            <span><i class="li-out"></i> sold out</span>
+                        </div>
+                    </div>
+
+                    <!-- SHIPPING -->
+                    <div class="fdb-block reveal" data-delay="1">
+                        <h3>shipping</h3>
+                        <table class="ship-table">
+                            <thead>
+                                <tr><th>Region</th><th>Time</th><th>Cost</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>United States</td><td>3–5 days</td><td>$4</td></tr>
+                                <tr><td>Canada</td><td>tbd</td><td>tbd</td></tr>
+                                <tr><td>International</td><td>tbd</td><td>tbd</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="fdb-note">
+                            Made to order — allow ~1–2 weeks for me to consume massive amounts of coffee before it ships. Prices in USD.
+                        </p>
+                    </div>
+
+                    <!-- ORDER -->
+                    <div class="fdb-block reveal" data-delay="1">
+                        <h3>want to order?</h3>
+                        <p class="muted" style="max-width:46ch;">
+                            DM me with your design, color choice, and add-ons. I'll confirm
+                            the total, then send payment + shipping details.
+                        </p>
+                        <div class="fdb-cta">
+                            <a class="btn btn--primary" href="https://t.me/lenrui" target="_blank" rel="noopener">order via telegram</a>
+                            <a class="btn btn--ghost" href="https://discordapp.com/users/314488059360182272" target="_blank" rel="noopener">dm on discord</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============ RIGHT: auto-scrolling examples ============
+                     EDIT ME: replace each empty <figure> with a real photo:
+                       <figure class="fdb-shot">
+                         <img src="../assets/fdb/badge1.jpg" alt="description" />
+                         <figcaption class="fdb-shot__cap">caption</figcaption>
+                       </figure>
+                     IMPORTANT: keep the two sets identical and in the same order
+                     (the second set has class "fdb__dup") so the scroll loops
+                     seamlessly. Put your images in an assets/fdb/ folder.
+                -->
+                <div class="fdb__gallery reveal" data-delay="1" aria-label="Example badges">
+                    <div class="fdb__track">
+                        <!-- SET A -->
+                        <figure class="fdb-shot">
+                            <img src="../assets/fdb/IMG_3654.jpg" alt="description" />
+                            <figcaption class="fdb-shot__cap">Beta Floppy Disk Label 2025</figcaption>
+                        </figure>
+                        <figure class="fdb-shot">
+                            <img src="../assets/fdb/IMG_3655.jpg" alt="description" />
+                            <figcaption class="fdb-shot__cap">Beta Floppy Disk Label 2025</figcaption>
+                        </figure>
+                        <figure class="fdb-shot">
+                            <img src="../assets/fdb/tora.jpg" alt="description" />
+                            <figcaption class="fdb-shot__cap">Beta Floppy Disk Label 2025</figcaption>
+                        </figure>
+                        <figure class="fdb-shot">
+                            <img src="../assets/fdb/bondo.jpg" alt="description" />
+                            <figcaption class="fdb-shot__cap">Beta Floppy Disk Label 2025</figcaption>
+                        </figure>
+                        <figure class="fdb-shot">
+                            <img src="../assets/fdb/axion.jpg" alt="description" />
+                            <figcaption class="fdb-shot__cap">Beta Floppy Disk Label 2025</figcaption>
+                        </figure>
+                        <figure class="fdb-shot">
+                            <img src="../assets/fdb/kuda.jpg" alt="description" />
+                            <figcaption class="fdb-shot__cap">Beta Floppy Disk Label 2025</figcaption>
+                        </figure>
+                        <!-- 
+                            <figure class="fdb-shot fdb-shot--empty"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V7l-4-4H4zm3 1h7v5H7V4zm4 0h2v4h-2V4zM6.5 13h11a.5.5 0 0 1 .5.5V20H6v-6.5a.5.5 0 0 1 .5-.5z"/></svg><figcaption class="fdb-shot__cap">keeb badge</figcaption></figure>
+                        -->
+
+                        <!-- SET B — duplicate for the seamless loop (hidden on mobile) -->
+                        <figure class="fdb-shot fdb__dup">
+                            <img src="../assets/fdb/IMG_3654.jpg" alt="description" />
+                            <figcaption class="fdb-shot__cap">Beta Floppy Disk Label 2025</figcaption>
+                        </figure>
+                        <figure class="fdb-shot fdb__dup">
+                            <img src="../assets/fdb/IMG_3655.jpg" alt="description" />
+                            <figcaption class="fdb-shot__cap">Beta Floppy Disk Label 2025</figcaption>
+                        </figure>
+                        <figure class="fdb-shot fdb__dup">
+                            <img src="../assets/fdb/tora.jpg" alt="description" />
+                            <figcaption class="fdb-shot__cap">Beta Floppy Disk Label 2025</figcaption>
+                        </figure>
+                        <figure class="fdb-shot fdb__dup">
+                            <img src="../assets/fdb/bondo.jpg" alt="description" />
+                            <figcaption class="fdb-shot__cap">Beta Floppy Disk Label 2025</figcaption>
+                        </figure>
+                        <figure class="fdb-shot fdb__dup">
+                            <img src="../assets/fdb/axion.jpg" alt="description" />
+                            <figcaption class="fdb-shot__cap">Beta Floppy Disk Label 2025</figcaption>
+                        </figure>
+                        <figure class="fdb-shot fdb__dup">
+                            <img src="../assets/fdb/kuda.jpg" alt="description" />
+                            <figcaption class="fdb-shot__cap">Beta Floppy Disk Label 2025</figcaption>
+                        </figure>
+                        <!---
+                            <figure class="fdb-shot fdb-shot--empty fdb__dup" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V7l-4-4H4zm3 1h7v5H7V4zm4 0h2v4h-2V4zM6.5 13h11a.5.5 0 0 1 .5.5V20H6v-6.5a.5.5 0 0 1 .5-.5z"/></svg><figcaption class="fdb-shot__cap">group set</figcaption></figure>
+                        -->
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <footer class="footer wrap">
+            <p class="footer__brand">Lén Rui</p>
+            <div class="footer__socials">
+                <a href="https://discordapp.com/users/314488059360182272" target="_blank" rel="noopener" aria-label="Discord"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286z"/></svg></a>
+                <a href="https://x.com/Lenruii" target="_blank" rel="noopener" aria-label="Twitter / X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                <a href="https://t.me/lenrui" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.91 3.79L20.3 20.84c-.25 1.21-.98 1.5-2 .94l-5.5-4.07-2.66 2.57c-.3.3-.55.56-1.1.56-.72 0-.6-.27-.84-.95L4.3 12.68l-5.45-1.7c-1.18-.35-1.19-1.16.26-1.75l21.26-8.2c.97-.43 1.9.24 1.53 1.72z" transform="translate(0.5 0)"/></svg></a>
+                <a href="https://www.youtube.com/channel/UCGg_1t49x-jf2KrbxdY-A5w" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                <a href="https://www.twitch.tv/Lenrui/" target="_blank" rel="noopener" aria-label="Twitch"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg></a>
+            </div>
+            <p class="footer__note">© <span data-year>2026</span> Lén Rui · made with too much snow ❄</p>
+        </footer>
+    </div>
+</body>
+</html>

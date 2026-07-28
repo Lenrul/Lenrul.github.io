@@ -578,3 +578,176 @@ h2.section-title {
     .reveal { opacity: 1; transform: none; transition: none; }
     .hero__portrait img { animation: none; }
 }
+
+/* =============================================================
+   FLOPPY DISK BADGE  (/fdb) — product page
+   Desktop: sticky info (left) + auto-scrolling examples (right).
+   Mobile: stacks; examples become a normal 2-up grid, no scroll.
+   ============================================================= */
+.fdb {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: start;
+    padding-bottom: clamp(3rem, 8vw, 6rem);
+}
+
+/* ---- LEFT: pricing / shipping / ordering (sticky) ---- */
+.fdb__info { position: sticky; top: calc(var(--nav-h) + 1.5rem); }
+.fdb__title {
+    font-family: var(--font-display);
+    font-size: clamp(2.6rem, 6vw, 4.4rem);
+    line-height: 0.92;
+    margin-block: 0.15rem 0.6rem;
+}
+.fdb__lead { color: var(--ink-soft); max-width: 48ch; }
+
+.fdb-block { margin-top: 2rem; }
+.fdb-block > h3 {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 2.6vw, 2rem);
+    display: inline-flex; align-items: center; gap: 0.55rem;
+    margin-bottom: 0.85rem;
+}
+.fdb-block > h3::before {
+    content: ""; width: 20px; height: 3px; border-radius: 3px;
+    background: var(--accent-strong);
+}
+
+/* price rows */
+.price-list { display: flex; flex-direction: column; gap: 0.6rem; }
+.price-row {
+    display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
+    padding: 0.75rem 1rem;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.price-row:hover { border-color: var(--accent); transform: translateX(3px); }
+.pr-name { font-weight: 600; }
+.pr-note { display: block; font-size: 0.85rem; color: var(--ink-faint); font-weight: 400; }
+.pr-cost { font-family: var(--font-display); font-size: 1.4rem; color: var(--accent-strong); white-space: nowrap; }
+
+/* add-ons */
+.fdb-addons { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+/* colour stock availability */
+.stock-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.6rem;
+}
+.stock-item {
+    display: flex; align-items: center; gap: 0.6rem;
+    padding: 0.5rem 0.65rem;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    transition: border-color 0.2s ease;
+}
+.stock-item:hover { border-color: var(--accent); }
+.swatch {
+    width: 26px; height: 26px; flex-shrink: 0;
+    border-radius: 50%;
+    border: 1px solid rgba(51, 43, 34, 0.25);
+    box-shadow: inset 0 -3px 5px rgba(0, 0, 0, 0.18);
+}
+.stock-item__name { font-size: 0.92rem; font-weight: 600; line-height: 1.15; }
+.stock-item__status {
+    display: block;
+    font-size: 0.72rem; font-weight: 400; letter-spacing: 0.03em;
+}
+.stock-item[data-stock="in"]  .stock-item__status { color: #3f9d5a; }
+.stock-item[data-stock="low"] .stock-item__status { color: #c98a2b; }
+.stock-item[data-stock="out"] { opacity: 0.55; }
+.stock-item[data-stock="out"] .stock-item__status { color: var(--ink-faint); }
+.stock-item[data-stock="out"] .stock-item__name { text-decoration: line-through; text-decoration-thickness: 1px; }
+.stock-item[data-stock="out"] .swatch { filter: grayscale(0.55); }
+
+.stock-legend {
+    display: flex; flex-wrap: wrap; gap: 0.9rem;
+    margin-top: 0.75rem;
+    font-size: 0.78rem; color: var(--ink-soft);
+}
+.stock-legend span { display: inline-flex; align-items: center; gap: 0.35rem; }
+.stock-legend i {
+    width: 9px; height: 9px; border-radius: 50%; display: inline-block;
+}
+.stock-legend .li-in  { background: #3f9d5a; }
+.stock-legend .li-low { background: #c98a2b; }
+.stock-legend .li-out { background: var(--ink-faint); }
+
+/* shipping table */
+.ship-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+.ship-table th, .ship-table td { text-align: left; padding: 0.55rem 0.4rem; border-bottom: 1px solid var(--line-soft); }
+.ship-table th { color: var(--ink); font-weight: 600; }
+.ship-table td:last-child, .ship-table th:last-child { text-align: right; white-space: nowrap; }
+.ship-table tr:last-child td { border-bottom: 0; }
+
+.fdb-note { font-size: 0.85rem; color: var(--ink-faint); margin-top: 0.7rem; }
+.fdb-cta { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2rem; }
+
+/* ---- RIGHT: auto-scrolling examples ---- */
+.fdb__gallery {
+    position: relative;
+    height: calc(100vh - var(--nav-h) - 3rem);
+    min-height: 460px;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 7%, #000 93%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, #000 7%, #000 93%, transparent);
+}
+.fdb__track {
+    display: flex;
+    flex-direction: column;
+    animation: fdb-scroll 45s linear infinite;
+    will-change: transform;
+}
+.fdb__gallery:hover .fdb__track { animation-play-state: paused; }
+/* -50% is an exact loop because the second set of shots is an identical
+   copy and every shot carries the same margin-bottom (uniform period). */
+@keyframes fdb-scroll {
+    from { transform: translateY(0); }
+    to   { transform: translateY(-50%); }
+}
+
+.fdb-shot {
+    position: relative;
+    margin-bottom: 1rem;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-sm);
+    background: linear-gradient(135deg, var(--accent-soft), var(--paper-2));
+    aspect-ratio: 4 / 3;
+}
+.fdb-shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.fdb-shot--empty { display: grid; place-items: center; color: var(--accent-strong); }
+.fdb-shot--empty svg { width: 40%; height: 40%; opacity: 0.5; }
+.fdb-shot__cap {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    padding: 0.55rem 0.85rem;
+    font-size: 0.85rem;
+    color: var(--paper);
+    background: linear-gradient(to top, rgba(51, 43, 34, 0.78), transparent);
+}
+
+@media (max-width: 900px) {
+    .fdb { grid-template-columns: 1fr; }
+    .fdb__info { position: static; }
+    .fdb__gallery {
+        height: auto; min-height: 0; overflow: visible;
+        -webkit-mask-image: none; mask-image: none;
+    }
+    .fdb__track {
+        animation: none;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    .fdb-shot { margin-bottom: 0; }
+    .fdb__dup { display: none; }   /* hide the duplicate marquee set on mobile */
+}
+@media (max-width: 480px) {
+    .fdb__track { grid-template-columns: 1fr; }
+}
