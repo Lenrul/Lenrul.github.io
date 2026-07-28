@@ -5,13 +5,21 @@ Evolved from the original ukiyo-e / warm-paper look with a real navigation bar,
 bigger type, animated cards, and a lightweight snowfall effect.
 
 ## Pages
-| File | What it is |
-|------|------------|
-| `index.html` | Home — hero, featured video, "find me" links |
-| `projects.html` | Things you've built (card grid) |
-| `commissions.html` | Work made for other people (gallery) |
-| `about.html` | About you |
-| `404.html` | Not-found page (GitHub Pages serves this automatically) |
+Each page lives in its own folder (except home + 404) so the URLs are clean —
+`lenrui.net/projects` instead of `lenrui.net/projects.html`.
+
+| File | URL | What it is |
+|------|-----|------------|
+| `index.html` | `/` | Home — hero, featured video, "find me" links |
+| `projects/index.html` | `/projects` | Things you've built (card grid) |
+| `commissions/index.html` | `/commissions` | Work made for other people (gallery) |
+| `fdb/index.html` | `/fdb` | Floppy Disk Badge product page |
+| `about/index.html` | `/about` | About you |
+| `404.html` | — | Not-found page (must stay at root; GitHub Pages serves it automatically) |
+
+Paths inside a folder page use `../` (e.g. `../css/styles.css`, `../assets/…`),
+and nav links point at sibling folders (e.g. `../projects/`). Home and 404 sit at
+the root, so they use plain paths (`css/…`, `projects/`).
 
 Shared pieces live in:
 - `css/styles.css` — all styling + the design tokens (colors, fonts) at the top
